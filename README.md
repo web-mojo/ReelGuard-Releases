@@ -9,8 +9,8 @@ ReelGuard is a Windows-only safety net for anyone dealing with card media who ne
 ## Highlights
 
 - Built for Windows 10/11
-- Watches SD/CF/CFexpress/SSDs/microSDs and other removable drives in real time
 - Compares cards file names and file sizes against one or more backup destinations
+- Lists mounted SD/CF/CFexpress/SSDs/microSDs and other removable drives to perform backup checks
 - Multiple post backup check operation modes - Wipe Card or Fake-Format Card (reversible)
 - Force operators to format cards in camera with the fake-format mode
 - Folder Mode for simple mirror file comparison of 2 destinations
