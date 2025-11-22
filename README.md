@@ -10,7 +10,7 @@ ReelGuard is a Windows-only safety net for anyone dealing with card media who ne
 
 - Built for Windows 10/11
 - Watches SD/CF/CFexpress/SSDs/microSDs and other removable drives in real time
-- Compares cards file names and file sizes against one or more backup folders
+- Compares cards file names and file sizes against one or more backup destinations
 - Multiple post backup check operation modes - Wipe Card or Fake-Format Card (reversible)
 - Force operators to format cards in camera with the fake-format mode
 - Folder Mode for simple mirror file comparison of 2 destinations
@@ -21,7 +21,7 @@ ReelGuard is a Windows-only safety net for anyone dealing with card media who ne
 
 ## Who It’s For
 
-- DITs and data wranglers on set  
+- DITs, Media Managers and Data Wranglers
 - Edit assistants and post-production teams handling card media
 - Anyone who wants a final “did we really back up this card?” check before reusing cards
 
@@ -56,24 +56,25 @@ Important: ReelGuard is designed to **avoid system drives and non-removable driv
 3. Add folders or drives where you store card backups (e.g. SSD, RAID, NAS share).
 4. Go through the settings to configure the app to your workflow and needs.
 5. Return to the cards view and start the backup check by clicking on the "Check Backup Status" button.
+6. ReelGuard lists any removable volumes formatted as FAT/exFAT/UDF as "Cards"
 
 ---
 
-## Daily Workflow
+## Workflow
 
-1. **Insert a card**  
-   ReelGuard lists it using the volume label so you can see at a glance which card you’re checking.
+1. **Insert Card Media**  
+   ReelGuard lists removable card media and other devices using the volume label so you can see at a glance which card you’re checking.
 
-2. **Press “Check Backup Status”**  
+3. **Press “Check Backup Status”**  
    The app compares files on the card to all configured backup destinations by **file name** and **file size**.
 
-3. **Review the results**  
+4. **Review the results**  
    You’ll see which destinations have matching files and which are missing copies according to the comparison rules.
 
-4. **Run the global hotkey (optional)**  
+5. **Run the global hotkey (optional)**  
    Once enabled in Settings, your recorded shortcut runs backup checks for all connected cards without opening the UI or Cards page.
 
-5. **Wipe or fake-format when you’re ready**  
+6. **Wipe or fake-format when you’re ready**  
    After a successful verification, you can directly perform your selected operation which is **Wipe Card** or **Fake Format**.  
    - Destructive operations are **restricted to removable drives** – system and fixed internal drives are protected.  
    - Even so, **always verify you’ve selected the correct card/drive** before proceeding. Use at your own risk!
@@ -93,7 +94,7 @@ If a file with the same name and size is found in the required number of destina
 This means there is a chance of false-positives if two or more files have the same file name and size on the backup destination.
 
 > For end-to-end checksum verification (MD5/SHA/xxHash), you should use your preferred offloading or ingest tool.  
-> ReelGuard is intended as a final **“did the files land where they’re supposed to?”** safety check before you recycle or prep the card.
+> ReelGuard is intended as a final **“did the files land where they’re supposed to?”** safety check before you recycle or prep cards for reuse.
 
 ---
 
@@ -101,32 +102,36 @@ This means there is a chance of false-positives if two or more files have the sa
 
 ### Wipe Mode
 
-- Default destructive mode after a successful verification.
-- Lets you securely delete the contents of a card once every file is confirmed across the required destinations.
+- Default operation mode after a successful verification.
+- Lets you directly delete the contents of a card once every file is confirmed across the required destinations.
 - System and non-removable internal drives are locked out so you shouldn't be able to wipe your OS or fixed storage by accident.
 - **Caution:** Wipes are permanent. Always confirm you’re wiping the correct card or removable drive.
 
 ### Fake-Format Mode
 
-- Destroys the card’s file system so it appears unreadable to cameras and computers.  
-  Operators will be forced to **format the card in camera** before they can use it.
+- Destroys the card’s file system so it appears unreadable to cameras, computers and other devices.  
+  Operators will be forced to **format the card in their device (e.g. camera)** before they can use it.
 - **Fully reversible in ReelGuard:**  
   - When Fake-Format Mode is enabled, you can run the **Restore** tool to rebuild the original file system view.  
   - Click the **Scan** button in the Cards view to detect fake-formatted cards and restore the data.
-- Useful if you want to ensure cards are always formatted by camera operators rather than reused without a fresh in-camera format.
-- **Caution:** While reversible in ReelGuard, fake-formatting is still a low-level operation on the card’s file system. Double-check the device before using it.
+- Useful if you want to ensure cards are always formatted by operators rather than reused without a fresh in-camera format.
+- **Caution:** While reversible in ReelGuard, fake-formatting is still a low-level operation on the card’s file system and can be prone to data-loss with untested devices. Double-check the device before using it.
+
+### Tested Cameras & Cards
+- SONY FX9/FX6/FX3/A7S -> XQD, CFexpress Type-A
+- GoPros -> microSD
 
 ### Folder Mode
 
-- Ideal when the “card” is actually a shuttle drive or when you just want to sanity-check mirror copies.
-- Instead of wiping or fake-formatting, you pick specific source folders (e.g. camera archives on the NAS) and verify that the same file names and file sizes exist on the target drives.
+- Ideal when the “card” is actually folders on a shuttle drive or NAS or when you just want to sanity-check mirror copies.
+- Instead of wiping or fake-formatting, you pick specific source folders (e.g. specific media folders on the NAS) and verify that the same file names and file sizes exist on the target drives.
 - Lets you validate multiple destinations quickly **without altering any device**.
 
 **Folder Mode Example:**
 
 1. Enable Folder Mode.
 2. In the Cards view, select the folders on your main storage (e.g. NAS) that represent your “source”.
-3. Add your shuttle drive as the backup destination.
+3. Add your shuttle drive or certain folders of it as the backup destination.
 4. ReelGuard will confirm that the folders on the shuttle drive match your selected source folders by file name and file size.
 
 ---
@@ -160,8 +165,8 @@ These options affect **verification checks only**. They do **not** change how wi
 
 - **Allow wiping/fake formatting when backup check fails** (off by default)  
   - When off, ReelGuard will block destructive operations if the backup verification fails.  
-  - When on, you can override missing-file warnings and proceed with the wipe or fake-format operation anyway.  
-  - Use this options with care and only when you are certain the card is safe to reuse des
+  - When on, you can override missing-file warnings and proceed with the wipe or fake-format operation anyway. 
+  - Use this options with care and only when you are certain the card is safe to reuse.
 
 - **After successful backup check**  
   Choose the default destructive action button:
@@ -192,7 +197,7 @@ These options affect **verification checks only**. They do **not** change how wi
 
 ReelGuard lets you fine-tune what’s considered during **backup checks**:
 
-- **File extensions**  
+- **Ignore or Flag certain File extensions**  
   - Add an extension as **Ignore** to skip those files entirely during the backup check. These files will still be deleted when performing the wipe operation.
   - Add an extension as **Flag** to highlight those files in the results dialogue when they're detected during a backup check.
 
@@ -237,10 +242,10 @@ ReelGuard is designed with protective defaults:
 However, no software can fully protect against operator error. **You are responsible for:**
 
 - Ensuring you’re operating on the correct card or drive.
-- Maintaining a robust offload and checksum veridication workflow with an offload tool of your choice.
+- Maintaining a robust offload and checksum verification workflow with an offload tool of your choice.
 - Verifying that your backups are valid and complete.
 
-Treat ReelGuard as an extra safety net in your backup chain, not as a replacement for good data management practices.
+Treat ReelGuard as an extra safety net in your backup workflow, not as a replacement for good data management practices.
 
 ---
 
