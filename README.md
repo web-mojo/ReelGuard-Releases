@@ -1,6 +1,6 @@
 # ReelGuard Backup Checker
 
-ReelGuard is a Windows-only safety net for anyone dealing with card media who needs confidence that every card has been copied before it’s reused or reformatted. It watches your removable media, confirms files exist in your backup destinations, and can wipe cards only after performing a match of **file name** and **file size** in your specified backup destination(s).
+ReelGuard is a Windows-only safety net for anyone dealing with card media who needs confidence that every card has been copied before it’s reused or reformatted. It watches your removable media, confirms files exist in your backup destinations and can wipe or fake-format cards after performing a match of **file name** and **file size** in your specified backup destination(s).
 
 > **Important:** ReelGuard does **not** perform checksum or hash verification. It compares file names and file sizes. You are responsible for using appropriate ingest and checksum tools in your workflow.
 
