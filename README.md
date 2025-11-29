@@ -4,7 +4,7 @@ ReelGuard is a Windows-only safety net for anyone dealing with card media who ne
 
 > **Important:** ReelGuard does **not** perform checksum or hash verification. It compares file names and file sizes. You are responsible for using appropriate ingest and checksum tools in your workflow.
 
-Download link: https://workdrive.zohopublic.com.au/external/22719ea02f9f1a40e4e0d3fc2a862646f2c6fc148286f95cbf366fd4aecf30b4/download
+Download link: [https://workdrive.zohopublic.com.au/external/22719ea02f9f1a40e4e0d3fc2a862646f2c6fc148286f95cbf366fd4aecf30b4/download](https://webmojo.com.au/wp-content/uploads/2025/11/reelguard_backup_checker_0.5_Win_Setup.zip)
 ---
 
 ## Highlights
