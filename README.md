@@ -27,14 +27,14 @@ Download link: https://webmojo.com.au/wp-content/uploads/2025/11/reelguard_backu
 - Edit assistants and post-production teams handling card media
 - Anyone who wants a final “did we really back up this card?” check before reusing cards
 
-Important: ReelGuard is designed to **avoid system drives and non-removable drives** for destructive operations. However, wiping and fake-formatting are always potentially destructive actions. **Always double-check you are operating on the correct card or drive** to avoid unwanted data loss. Make sure you read and understand the documentation and use at your own risk!
+Important: ReelGuard is designed to **ignore system drives and non-removable drives** to avoid potentially dangerous operations. However, wiping and fake-formatting are always potentially destructive actions. **Always double-check you are operating on the correct card or drive** to avoid unwanted data loss. Make sure you read and understand the documentation and use at your own risk!
 
 ---
 
 ## System Requirements
 
 - Windows 10 or Windows 11 (64-bit)
-- Administrator rights to install the desktop app
+- Local Admin rights to install the desktop app
 - Administrator rights to use the fake-format function
 
 ---
@@ -74,11 +74,11 @@ Important: ReelGuard is designed to **avoid system drives and non-removable driv
    You’ll see which destinations have matching files and which are missing copies according to the comparison rules.
 
 5. **Run the global hotkey (optional)**  
-   Once enabled in Settings, your recorded shortcut runs backup checks for all connected cards without opening the UI or Cards page.
+   Once enabled in Settings, you can set your own keyboard shortcut to run backup checks for all connected cards.
 
 6. **Wipe or fake-format when you’re ready**  
    After a successful verification, you can directly perform your selected operation which is **Wipe Card** or **Fake Format**.  
-   - Destructive operations are **restricted to removable drives** – system and fixed internal drives are protected.  
+   - Destructive operations are **restricted to removable drives** – system and fixed internal drives are ignored and protected.  
    - Even so, **always verify you’ve selected the correct card/drive** before proceeding. Use at your own risk!
 
 ---
