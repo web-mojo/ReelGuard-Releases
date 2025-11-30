@@ -1,8 +1,8 @@
 # ReelGuard Backup Checker
 
-ReelGuard is a Windows-only safety net for anyone dealing with card media who needs confidence that every card has been copied before it’s reused or reformatted. It watches your removable media, confirms files exist in your backup destinations and can wipe or fake-format cards after performing a match of **file name** and **file size** in your specified backup destination(s).
+ReelGuard is a free Windows-only app for anyone dealing with card media who needs confidence that every card has been copied before it’s reused or reformatted. It detects and displays removable devices (e.g. card media), confirms files exist in your backup destinations and can wipe or fake-format cards after performing a match of **file name** and **file size** in your specified backup destination(s).
 
-> **Important:** ReelGuard does **not** perform checksum or hash verification. It compares file names and file sizes. You are responsible for using appropriate ingest and checksum tools in your workflow.
+> **Important:** ReelGuard does **not** perform checksum or hash verification. It compares file names and file sizes. You are responsible for using appropriate ingest and checksum tools in your workflow when offloading card media.
 
 Download link: https://webmojo.com.au/wp-content/uploads/2025/11/reelguard_backup_checker_0.5_Win_Setup.zip
 
@@ -15,7 +15,7 @@ Download link: https://webmojo.com.au/wp-content/uploads/2025/11/reelguard_backu
 - Lists mounted SD/CF/CFexpress/SSDs/microSDs and other removable drives to perform backup checks
 - Multiple post backup check operation modes - Wipe Card or Fake-Format Card (reversible)
 - Force operators to format cards in camera with the fake-format mode
-- Folder Mode for simple mirror file comparison of 2 destinations
+- Folder Mode for simple mirror file comparison of 2 or more destinations
 - Prep-Mode to quickly prepare (wipe/fake-format) cards for an upcoming shoot 
 - Detailed settings to adjust the app to your workflow such as ignoring files and folders during backup-checks, flag certain filetypes, hotkeys, and more...
 
@@ -34,8 +34,7 @@ Important: ReelGuard is designed to **ignore system drives and non-removable dri
 ## System Requirements
 
 - Windows 10 or Windows 11 (64-bit)
-- Local Admin rights to install the desktop app
-- Administrator rights to use the fake-format function
+- Local administrator rights to use the fake-format function
 
 ---
 
@@ -43,8 +42,8 @@ Important: ReelGuard is designed to **ignore system drives and non-removable dri
 
 1. Grab the latest `.zip` release from the GitHub Releases page.
 2. Extract the .zip file. It contains the ReelGuard Windows installer (`ReelGuard_{version}_Setup.exe`).
-3. Double-click the installer. Windows SmartScreen may flag the download because it’s new:
-   - Choose **More info**.
+3. Double-click the installer. The app is signed with a proper security certificate but Windows SmartScreen may flag the download because it’s a new app:
+   - If the Windows SmartScreen flags it choose **More info**.
    - Click **Run anyway** to continue.
 4. Follow the installer prompts. All dependencies are bundled, no separate install is required.
 5. Launch ReelGuard from the Start Menu. An uninstaller is created automatically if you ever need to remove it.
@@ -56,7 +55,7 @@ Important: ReelGuard is designed to **ignore system drives and non-removable dri
 1. Open ReelGuard and go to **Backup Destinations**.
 2. Set the minimum number of destinations that must contain a file before the app considers it “safe”.
 3. Add folders or drives where you store card backups (e.g. SSD, RAID, NAS share).
-4. Go through the settings to configure the app to your workflow and needs.
+4. Go through the settings to configure the app to your workflow and needs. Configure your preferred post backup check action (wipe or fake-format).
 5. Return to the cards view and start the backup check by clicking on the "Check Backup Status" button.
 6. ReelGuard lists any removable volumes formatted as FAT/exFAT/UDF as "Cards"
 
@@ -71,12 +70,9 @@ Important: ReelGuard is designed to **ignore system drives and non-removable dri
    The app compares files on the card to all configured backup destinations by **file name** and **file size**.
 
 4. **Review the results**  
-   You’ll see which destinations have matching files and which are missing copies according to the comparison rules.
+   You’ll see a backup status view which tells you whether or not the backup check was successful. If the backup check fails according to the comparison rules, you'll see which files are missing and what destinations they're missing on.
 
-5. **Run the global hotkey (optional)**  
-   Once enabled in Settings, you can set your own keyboard shortcut to run backup checks for all connected cards.
-
-6. **Wipe or fake-format when you’re ready**  
+5. **Wipe or fake-format when you’re ready**  
    After a successful verification, you can directly perform your selected operation which is **Wipe Card** or **Fake Format**.  
    - Destructive operations are **restricted to removable drives** – system and fixed internal drives are ignored and protected.  
    - Even so, **always verify you’ve selected the correct card/drive** before proceeding. Use at your own risk!
@@ -116,7 +112,7 @@ This means there is a chance of false-positives if two or more files have the sa
 - **Fully reversible in ReelGuard:**  
   - When Fake-Format Mode is enabled, you can run the **Restore** tool to rebuild the original file system view.  
   - Click the **Scan** button in the Cards view to detect fake-formatted cards and restore the data.
-- Useful if you want to ensure cards are always formatted by operators rather than reused without a fresh in-camera format.
+- Fake-Format is useful if you want to ensure cards are always formatted by operators rather than reused without a fresh in-camera format.
 - **Caution:** While reversible in ReelGuard, fake-formatting is still a low-level operation on the card’s file system and can be prone to data-loss with untested devices. Double-check the device before using it.
 
 ### Tested Cameras & Cards
