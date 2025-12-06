@@ -4,7 +4,7 @@ ReelGuard is a free Windows-only app for anyone dealing with card media who need
 
 > **Important:** ReelGuard does **not** perform checksum or hash verification. It compares file names and file sizes. You are responsible for using appropriate ingest and checksum tools in your workflow when offloading card media.
 
-Download link: [https://webmojo.com.au/wp-content/uploads/2025/11/reelguard_backup_checker_0.5_Win_Setup.zip](https://webmojo.com.au/reelguard-backup-checker)
+Download link: https://webmojo.com.au/reelguard-backup-checker
 
 ---
 
