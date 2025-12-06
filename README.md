@@ -26,15 +26,6 @@ More Details & Download link: https://webmojo.com.au/reelguard-backup-checker
 - Prep-Mode to quickly prepare (wipe/fake-format) cards for an upcoming shoot 
 - Detailed settings to adjust the app to your workflow such as ignoring files and folders during backup-checks, flag certain filetypes, hotkeys, and more...
 
----
-
-## Who It’s For
-
-- DITs, Media Managers and Data Wranglers
-- Edit assistants and post-production teams handling card media
-- Anyone who wants a final “did we really back up this card?” check before reusing cards
-
-Important: ReelGuard is designed to **ignore system drives and non-removable drives** to avoid potentially dangerous operations. However, wiping and fake-formatting are always potentially destructive actions. **Always double-check you are operating on the correct card or drive** to avoid unwanted data loss. Make sure you read and understand the documentation and use at your own risk!
 
 ---
 
