@@ -9,7 +9,7 @@ Who it’s for:
 - Anyone who wants a final “did we really back up this card?” check before reusing camera cards
 - ReelGuard is used by DITs, Assistant Editors and Data Wranglers on major large-scale productions across Australia and world-wide.
 
-> **Important:** ReelGuard doesn't perform checksum verification of your media. It only compares file names and file sizes. For end-to-end checksum verification (MD5/SHA/xxHash), you should use your preferred offloading or ingest tool. ReelGuard is intended as a final “did the files land where they’re supposed to?” sanity check after you’ve created and verified your backups. Use at own risk and make sure to read the documentation.
+> **Important:** ReelGuard doesn't perform checksum verification of your media. It only compares file names and file sizes. For end-to-end checksum verification (MD5/SHA/xxHash), you should use your preferred offloading or ingest tool. ReelGuard is intended as a final “did the files land where they’re supposed to?” sanity check after you’ve created and verified your backups while allowing you to prepare your cards to be reused with ease. Use at own risk and make sure to read the documentation.
 
 More Details & Download link: https://webmojo.com.au/reelguard-backup-checker
 
