@@ -1,8 +1,15 @@
 # ReelGuard Backup Checker
 
-ReelGuard is a free Windows-only app for anyone dealing with card media who needs confidence that every card has been copied before it’s reused or reformatted. It detects and displays removable devices (e.g. card media), confirms files exist in your backup destinations and can wipe or fake-format cards after performing a match of **file name** and **file size** in your specified backup destination(s).
+ReelGuard is a free Windows app for anyone dealing with card media who needs confidence that every card has been backed up before it’s reused or reformatted. It detects inserted card media and confirms the files on the card exist in your backup destinations. You can wipe or fake-format cards after the app performs a match of file name and file size in your specified backup destination(s) so you can reuse the card with confidence. Choose from helpful settings to make the app fit your workflow.
 
-> **Important:** ReelGuard does **not** perform checksum or hash verification. It compares file names and file sizes. You are responsible for using appropriate ingest and checksum tools in your workflow when offloading card media.
+Who it’s for:
+
+- DITs, Media Managers and Data Wranglers
+- Edit assistants and post-production teams handling card media
+- Anyone who wants a final “did we really back up this card?” check before reusing camera cards
+- ReelGuard is used by DITs, Assistant Editors and Data Wranglers on major large-scale productions across Australia and world-wide.
+
+> **Important:** ReelGuard doesn't perform checksum verification of your media. It only compares file names and file sizes. For end-to-end checksum verification (MD5/SHA/xxHash), you should use your preferred offloading or ingest tool. ReelGuard is intended as a final “did the files land where they’re supposed to?” sanity check after you’ve created and verified your backups. Use at own risk and make sure to read the documentation.
 
 More Details & Download link: https://webmojo.com.au/reelguard-backup-checker
 
