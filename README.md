@@ -1,6 +1,8 @@
 # ReelGuard Backup Checker
 
-ReelGuard is a free Windows app for anyone dealing with card media who needs confidence that every card has been backed up before it’s reused or reformatted. It detects inserted card media and confirms the files on the card exist in your backup destinations. You can wipe or fake-format cards after the app performs a match of file name and file size in your specified backup destination(s) so you can reuse the card with confidence. Choose from helpful settings to make the app fit your workflow.
+ReelGuard is a free Windows app for anyone dealing with card media who needs confidence that every card has been backed up before it’s reused or reformatted. It detects inserted card media and confirms the files on the card exist in your backup destinations. You can wipe or fake-format cards after the app performs a match of file name and file size in your specified backup destination(s) so you can reuse or erase the card with confidence. Choose from helpful settings to make the app fit your workflow.
+
+I built the app as a free Windwos alternative to the wonderful ParaShoot app (which is MacOs only). I needed a version for Windows, so I ended up building my own with a few extra workflow options to suit my media management needs. Initially built and used as a CLI tool for a few years I have recently wrapped it into a GUI to make it easily accessible for other DITs / data wranglers / media managers.
 
 ![Screenshot](https://webmojo.com.au/wp-content/uploads/2025/12/ReelGuard-Backup-Checker.png)
 
