@@ -2,6 +2,8 @@
 
 ReelGuard is a free Windows app for anyone dealing with card media who needs confidence that every card has been backed up before it’s reused or reformatted. It detects inserted card media and confirms the files on the card exist in your backup destinations. You can wipe or fake-format cards after the app performs a match of file name and file size in your specified backup destination(s) so you can reuse the card with confidence. Choose from helpful settings to make the app fit your workflow.
 
+![Screenshot](https://webmojo.com.au/wp-content/uploads/2025/12/ReelGuard-Backup-Checker.png)
+
 Who it’s for:
 
 - DITs, Media Managers and Data Wranglers
@@ -26,6 +28,7 @@ More Details & Download link: https://webmojo.com.au/reelguard-backup-checker
 - Prep-Mode to quickly prepare (wipe/fake-format) cards for an upcoming shoot 
 - Detailed settings to adjust the app to your workflow such as ignoring files and folders during backup-checks, flag certain filetypes, hotkeys, and more...
 
+![Screenshot](https://webmojo.com.au/wp-content/uploads/2025/12/ReelGuard-Backup-Checker-Successful.png)
 
 ---
 
@@ -92,6 +95,8 @@ This means there is a chance of false-positives if two or more files have the sa
 > For end-to-end checksum verification (MD5/SHA/xxHash), you should use your preferred offloading or ingest tool.  
 > ReelGuard is intended as a final **“did the files land where they’re supposed to?”** safety check before you recycle or prep cards for reuse.
 
+![Screenshot](https://webmojo.com.au/wp-content/uploads/2025/12/ReelGuard-Backup-Incomplete.png)
+
 ---
 
 ## Operating Modes
@@ -117,6 +122,8 @@ This means there is a chance of false-positives if two or more files have the sa
 - SONY FX9/FX6/FX3/A7S -> XQD, CFexpress Type-A
 - GoPros -> microSD
 
+![Screenshot](https://webmojo.com.au/wp-content/uploads/2025/12/ReelGuard-Flagged-File-Extensions.png)  
+
 ### Folder Mode
 
 - Ideal when the “card” is actually folders on a shuttle drive or NAS or when you just want to sanity-check mirror copies.
@@ -139,6 +146,8 @@ This means there is a chance of false-positives if two or more files have the sa
 - Add as many destinations as you need (local SSD, RAID, NAS, shuttle drive).
 - Use the **Minimum backup destinations** dropdown to define how many copies must be present before a card is considered “safe”.
 - Destinations can be local or network paths as long as Windows can access them.
+
+![Screenshot](https://webmojo.com.au/wp-content/uploads/2025/12/ReelGuard-Backup-Destinations.png) 
 
 ### Hotkey Settings (disabled by default)
 
@@ -200,6 +209,8 @@ ReelGuard lets you fine-tune what’s considered during **backup checks**:
 - **Ignored folders**  
   Provide folder names (case-sensitive) to exclude from scans—helpful for system folders that always appear on removable media.
   These folders will still be deleted when performing the wipe operation.
+
+  ![Screenshot](https://webmojo.com.au/wp-content/uploads/2025/12/ReelGuard-Ignore-Files-and-Folders.png)
 
 > **Important:** Ignore & Flag settings affect **backup verification only**.  
 > If you run a **Wipe** or **Fake-Format** operation on a card, **all files and folders on that card will be removed**, including anything you have configured to ignore or flag.  
